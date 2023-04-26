@@ -1,8 +1,9 @@
-# 回调函数1
-# 生成一个2k形式的偶数
 
 __all__ = ["double", "quadruple"]
 
+
+# 回调函数1
+# 生成一个2k形式的偶数
 def double(x):
     return 2 * x
 
