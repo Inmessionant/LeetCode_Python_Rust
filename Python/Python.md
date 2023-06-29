@@ -2,7 +2,7 @@
 
 
 
-## 01.Regex
+## 01. Regex
 
 
 
@@ -150,7 +150,7 @@ Group用法：
 
 
 
-## 02.What the f*ck Python!
+## 02. What the f*ck Python!
 
 
 
@@ -161,6 +161,51 @@ Group用法：
 ------
 
 
+
+
+
+## 03. 新特性
+
+
+
+#### 01. match语句
+
+```python
+def http_error(status):
+    match status:
+        case 400:
+            return "Bad request"
+        case 404:
+            return "Not found"
+        case 418:
+            return "I'm a teapot"
+        case _:  #  通配符 并必定会匹配成功
+            return "Something's wrong with the internet"
+
+     
+# 使用 | （“ or ”）在一个模式中可以组合多个字面值
+case 401 | 403 | 404:
+    return "Not allowed"
+
+
+# point is an (x, y) tuple
+class Point:
+    x: int
+    y: int
+
+def where_is(point):
+    match point:
+        case Point(x=0, y=0):
+            print("Origin")
+        case Point(x=0, y=y):
+            print(f"Y={y}")
+        case Point(x=x, y=0):
+            print(f"X={x}")
+        case Point():
+            print("Somewhere else")
+        case _:
+            print("Not a point")
+```
 
 
 
