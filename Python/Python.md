@@ -205,6 +205,14 @@ def where_is(point):
             print("Somewhere else")
         case _:
             print("Not a point")
+            
+            
+# 为模式添加成为守护项的 if 子句。如果守护项的值为假，则 match 继续匹配下一个 case 语句块     
+match point:
+    case Point(x, y) if x == y:
+        print(f"Y=X at {x}")
+    case Point(x, y):
+        print(f"Not on the diagonal")          
 ```
 
 
