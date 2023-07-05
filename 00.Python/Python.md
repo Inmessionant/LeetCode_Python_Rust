@@ -164,13 +164,14 @@ Group用法：
 
 
 
-## 03. 新特性
+## 03. Python 
 
 
 
-#### 01. match语句
+#### 01. match
 
 ```python
+1.match语句
 def http_error(status):
     match status:
         case 400:
@@ -183,31 +184,12 @@ def http_error(status):
             return "Something's wrong with the internet"
 
      
-# 使用 | （“ or ”）在一个模式中可以组合多个字面值
+2. 使用 | （“ or ”）在一个模式中可以组合多个字面值
 case 401 | 403 | 404:
     return "Not allowed"
-
-
-# point is an (x, y) tuple
-class Point:
-    x: int
-    y: int
-
-def where_is(point):
-    match point:
-        case Point(x=0, y=0):
-            print("Origin")
-        case Point(x=0, y=y):
-            print(f"Y={y}")
-        case Point(x=x, y=0):
-            print(f"X={x}")
-        case Point():
-            print("Somewhere else")
-        case _:
-            print("Not a point")
+          
             
-            
-# 为模式添加成为守护项的 if 子句。如果守护项的值为假，则 match 继续匹配下一个 case 语句块     
+3.为模式添加成为守护项的 if 子句。如果守护项的值为假，则 match 继续匹配下一个 case 语句块     
 match point:
     case Point(x, y) if x == y:
         print(f"Y=X at {x}")
@@ -216,4 +198,14 @@ match point:
 ```
 
 
+
+#### 02. keyword argument
+
+```python
+1.函数调用时，关键字参数必须跟在位置参数后面；
+
+2. *arguments形参接收一个元组  **keywords形参接收一个字典
+def cheeseshop(kind, *arguments, **keywords): 
+    pass
+```
 
