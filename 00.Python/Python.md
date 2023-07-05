@@ -171,15 +171,13 @@ Group用法：
 #### 01. match
 
 ```python
-1.match语句
+1.
 def http_error(status):
     match status:
         case 400:
             return "Bad request"
         case 404:
             return "Not found"
-        case 418:
-            return "I'm a teapot"
         case _:  #  通配符 并必定会匹配成功
             return "Something's wrong with the internet"
 
@@ -204,8 +202,65 @@ match point:
 ```python
 1.函数调用时，关键字参数必须跟在位置参数后面；
 
+
 2. *arguments形参接收一个元组  **keywords形参接收一个字典
 def cheeseshop(kind, *arguments, **keywords): 
     pass
+
+
+3.
+def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
+      -----------    ----------     ----------
+        |             |                  |
+        |        Positional or keyword   |
+        |                                - Keyword only
+         -- Positional only
+
+3.1 函数定义中未使用 / 和 * 时，参数可以按位置或关键字传递给函数;
+3.2 特定形参可以标记为仅限位置。仅限位置时，形参的顺序很重要，且这些形参不能用关键字传递。仅限位置形参应放在 / （正斜杠）前。/ 用于在逻辑上分割仅限位置形参与其它形参。如果函数定义中没有 /，则表示没有仅限位置形参。 / 后可以是 位置或关键字 或 仅限关键字 形参;
+3.3 把形参标记为 仅限关键字，表明必须以关键字参数形式传递该形参，应在参数列表中第一个 仅限关键字 形参前添加 *；
+```
+
+
+
+#### 03. 解包实参
+
+```python
+1. 函数调用要求独立的位置参数，但实参在列表或元组里时，要执行相反的操作。例如，内置的 range() 函数要求独立的 start 和 stop 实参。如果这些参数不是独立的，则要在调用函数时，用 * 操作符把实参从列表或元组解包出来：
+list(range(3, 6))            # normal call with separate arguments，[3, 4, 5]
+args = [3, 6]
+list(range(*args))           # call with arguments unpacked from a list，[3, 4, 5]
+
+
+2. 字典可以用 ** 操作符传递关键字参数：
+def parrot(voltage, state='a stiff', action='voom'):
+    print("-- This parrot wouldn't", action, end=' ')
+    print("if you put", voltage, "volts through it.", end=' ')
+    print("E's", state, "!")
+
+d = {"voltage": "four million", "state": "bleedin' demised", "action": "VOOM"}
+parrot(**d)  # -- This parrot wouldn't VOOM if you put four million volts through it. E's bleedin' demised !
+```
+
+
+
+#### 04. 文档字符串
+
+```python
+1. 第一行应为对象用途的简短摘要。为保持简洁，不要在这里显式说明对象名或类型，因为可通过其他方式获取这些信息这一行应以大写字母开头，以句点结尾
+2. 文档字符串为多行时，第二行应为空白行，在视觉上将摘要与其余描述分开，后面的行可包含若干段落，描述对象的调用约定、副作用等；
+3. Python 解析器不会删除 Python 中多行字符串字面值的缩进，因此，文档处理工具应在必要时删除缩进。这项操作遵循以下约定：文档字符串第一行之后的第一个非空行决定了整个文档字符串的缩进量，然后删除字符串中所有行开头处与此缩进“等价”的空白符，不能有比此缩进更少的行，但如果出现了缩进更少的行，应删除这些行的所有前导空白符；
+
+def my_function():
+    """Do nothing, but document it.   
+
+    No, really, it doesn't do anything.
+    """
+    pass
+
+print(my_function.__doc__)
+Do nothing, but document it.
+
+    No, really, it doesn't do anything.
 ```
 
