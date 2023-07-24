@@ -1,51 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2de39fc4-86cc-4456-95a3-27a894afeaa5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00.Python_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/00.Python_tutorial.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01.Callback回调/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01.Callback回调/.idea/01.Callback回调.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01.Callback回调/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01.Callback回调/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01.Callback回调/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01.Callback回调/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01.Callback回调/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01.Callback回调/demo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01.Callback回调/event.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2022_old/01.二分查找 &amp; 排序.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2022_old/02.双指针 &amp; 滑动窗口.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2022_old/03.链表.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2022_old/04.二叉树.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2022_old/05.栈 &amp; 队列 &amp; 单调栈.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2022_old/06.深度优先 &amp; 广度优先.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2022_old/07.哈希表.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2022_old/08.回溯算法.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2022_old/09.优先级队列.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2022_old/10.贪心算法.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2022_old/11.拓扑排序.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2022_old/12.并查集.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2022_old/13.最小生成树 &amp; 最短路径.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2022_old/14.二进制.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2022_old/15.动态规划.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2022_old/16.其他leetCode题目.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2023_new/01.数组&amp;排序&amp;二分查找✅.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2023_new/02.双指针&amp;滑动窗口.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2023_new/03.链表.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2023_new/04.堆栈&amp;队列.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2023_new/05.深度优先搜索&amp;广度优先搜索.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2023_new/06.拓扑排序.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2023_new/07.哈希表.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2023_new/08.字符串.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2023_new/09.二叉树.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2023_new/10.并查集.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2023_new/11.回溯算法.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2023_new/12.贪心算法.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2023_new/13.位运算.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2023_new/14.最小生成树&amp;最短路径.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2023_new/15.动态规划.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="2de39fc4-86cc-4456-95a3-27a894afeaa5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,15 +18,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/Github/LeetCode-Python",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -81,6 +40,7 @@
       <updated>1690208937969</updated>
       <workItem from="1690208939056" duration="245000" />
       <workItem from="1690209188295" duration="43000" />
+      <workItem from="1690209588896" duration="172000" />
     </task>
     <servers />
   </component>
