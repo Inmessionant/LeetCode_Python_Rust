@@ -85,7 +85,7 @@
       <workItem from="1690209188295" duration="43000" />
       <workItem from="1690209588896" duration="172000" />
       <workItem from="1690296388299" duration="624000" />
-      <workItem from="1690378028646" duration="2003000" />
+      <workItem from="1690378028646" duration="4191000" />
     </task>
     <servers />
   </component>
@@ -93,6 +93,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/LeetCode_Python$704_.coverage" NAME="704.二分查找 Coverage Results" MODIFIED="1690381718570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
+    <SUITE FILE_PATH="coverage/LeetCode_Python$704_.coverage" NAME="704.二分查找 Coverage Results" MODIFIED="1690383941451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
   </component>
 </project>
