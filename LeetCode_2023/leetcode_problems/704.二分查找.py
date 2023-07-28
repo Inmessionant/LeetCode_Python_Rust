@@ -34,7 +34,7 @@ def binary_search2_left(nums: List[int], target: int) -> int:
 
 
 def binary_search2_right(nums: List[int], target: int) -> int:
-    
+
     l, r = 0, len(nums) - 1
 
     while l < r:
