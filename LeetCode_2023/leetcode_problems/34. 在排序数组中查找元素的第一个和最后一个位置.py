@@ -5,6 +5,7 @@ class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
 
         res = [-1, -1]
+
         if not nums:
             return res
         # nums 是一个非递减数组
