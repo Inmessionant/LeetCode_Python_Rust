@@ -25,7 +25,7 @@
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
-  "associatedIndex": -1
+  "associatedIndex": 1
 }]]></component>
   <component name="ProjectId" id="2T1S8w6NfvAG40qgpMTcXhV4zp9" />
   <component name="ProjectViewState">
@@ -182,7 +182,8 @@
       <workItem from="1690209588896" duration="172000" />
       <workItem from="1690296388299" duration="624000" />
       <workItem from="1690378028646" duration="9815000" />
-      <workItem from="1690894690841" duration="4149000" />
+      <workItem from="1690894690841" duration="4750000" />
+      <workItem from="1691318545164" duration="2017000" />
     </task>
     <servers />
   </component>
