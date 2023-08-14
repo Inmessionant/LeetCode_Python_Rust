@@ -47,11 +47,11 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.912.堆排序">
+  <component name="RunManager" selected="Python.54. 螺旋矩阵">
     <configuration name="54. 螺旋矩阵" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="LeetCode-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -164,7 +164,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.912.堆排序" />
         <item itemvalue="Python.912.归并排序" />
         <item itemvalue="Python.59. 螺旋矩阵 II" />
         <item itemvalue="Python.54. 螺旋矩阵" />
@@ -192,7 +191,8 @@
       <workItem from="1691073319259" duration="114000" />
       <workItem from="1691582683989" duration="5571000" />
       <workItem from="1691590355717" duration="202000" />
-      <workItem from="1692024606828" duration="2732000" />
+      <workItem from="1692024606828" duration="2954000" />
+      <workItem from="1692027597880" duration="31000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
