@@ -3,7 +3,7 @@
 
 
 - [x] **Algorithm-Pattern: https://github.com/greyireland/algorithm-pattern**
-- [x] **代码随想录: https://programmercarl.com/  --->>>  https://programmercarl.com/0027.%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.html**
+- [x] **代码随想录: https://programmercarl.com/**
 
 
 
