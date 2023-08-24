@@ -25,6 +25,7 @@ class Solution:
 
         return res
 
+
 s = "cbaebabacd"
 p = "abc"
 print(Solution().findAnagrams(s, p))
