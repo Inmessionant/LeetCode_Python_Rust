@@ -3,19 +3,17 @@ class Solution:
 
         l, r, n = 0, 0, len(s)
         max_len = 0
-        last_idx_dict = dict()
+        last_idx = dict()
 
         while r < n:
-
-            last_idx_dict[s[r]] = r
-
-            if s[r] in last_idx_dict and last_idx_dict[s[r]] >= l:
+            if s[r] in last_idx and last_idx[s[r]] >= l:  # 不满足条件
                 max_len = max(max_len, r - l)
-                l = last_idx_dict[s[r]] + 1
+                l = last_idx[s[r]] + 1
 
+            last_idx[s[r]] = r
             r += 1
 
-        return max(max_len, r - l)
+        return max(max_len, r - l)  # 当s=“ ”，
 
 
 s = " "
