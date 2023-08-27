@@ -23,16 +23,16 @@ class MaxStack:
 
         return self.max_stack[-1]
 
-    def popMax(self):  # 这个函数比较特殊
+    def popMax(self):
 
-        max_number = self.peekMax()
+        max_number = self.peekMax()  # 先明确最大值
 
         buffer_stack = []
 
-        while self.top() != max_number:
-            buffer_stack.append(self.pop())
+        while self.top() != max_number:  # 当前top值不是最大值，要先存起来
+            buffer_stack.append(self.pop())  # 同时弹出stack与max_stack
 
-        self.pop()
+        self.pop()  # 取出最大值
 
         while buffer_stack:
             self.push(buffer_stack.pop())
