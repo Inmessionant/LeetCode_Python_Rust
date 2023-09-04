@@ -62,29 +62,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.496. 下一个更大元素 I">
-    <configuration name="150. 逆波兰表达式求值" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="LeetCode-Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems/150. 逆波兰表达式求值.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.503. 下一个更大元素 II">
     <configuration name="227. 基本计算器 II" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="LeetCode-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -151,6 +129,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="503. 下一个更大元素 II" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="LeetCode-Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems/503. 下一个更大元素 II.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="739. 每日温度" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="LeetCode-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -175,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.503. 下一个更大元素 II" />
         <item itemvalue="Python.496. 下一个更大元素 I" />
         <item itemvalue="Python.739. 每日温度" />
         <item itemvalue="Python.394. 字符串解码" />
         <item itemvalue="Python.227. 基本计算器 II" />
-        <item itemvalue="Python.150. 逆波兰表达式求值" />
       </list>
     </recent_temporary>
   </component>
@@ -250,6 +250,7 @@
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/LeetCode_Python$503___II.coverage" NAME="503. 下一个更大元素 II Coverage Results" MODIFIED="1693828096964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$16__.coverage" NAME="16. 最接近的三数之和 Coverage Results" MODIFIED="1692797739539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$283__.coverage" NAME="283. 移动零 Coverage Results" MODIFIED="1692793445368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$35__.coverage" NAME="35. 搜索插入位置 Coverage Results" MODIFIED="1690556452921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
@@ -261,7 +262,7 @@
     <SUITE FILE_PATH="coverage/LeetCode_Python$20__.coverage" NAME="20. 有效的括号 Coverage Results" MODIFIED="1693135918841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$154___II.coverage" NAME="154. 寻找旋转排序数组中的最小值 II Coverage Results" MODIFIED="1690898753041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$15__.coverage" NAME="15. 三数之和 Coverage Results" MODIFIED="1692795194594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
-    <SUITE FILE_PATH="coverage/LeetCode_Python$496___I.coverage" NAME="496. 下一个更大元素 I Coverage Results" MODIFIED="1693643185831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
+    <SUITE FILE_PATH="coverage/LeetCode_Python$496___I.coverage" NAME="496. 下一个更大元素 I Coverage Results" MODIFIED="1693643346683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$1047__.coverage" NAME="1047. 删除字符串中的所有相邻重复项 Coverage Results" MODIFIED="1693147363376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$946___.coverage" NAME="946. 验证栈序列  Coverage Results" MODIFIED="1693135430183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$240___II.coverage" NAME="240. 搜索二维矩阵 II Coverage Results" MODIFIED="1690896897934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
