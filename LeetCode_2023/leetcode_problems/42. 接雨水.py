@@ -5,17 +5,15 @@ class Solution:
     def trap(self, height: List[int]) -> int:
 
         stack = []
-        n = len(height)
         res = 0
-        for i in range(n):
+        for i in range(len(height)):
             while stack and height[i] > height[stack[-1]]:
                 bottom = height[stack.pop()]
                 if not stack: break
-                cur_left = height[stack[-1]]
-                cur_right = height[i]
-                height = min(cur_left, cur_right) - bottom
-                width = i - stack[-1] - 1
-                res += (width * height)
+                left_height = height[stack[-1]]
+                cur_height = min(left_height, height[i]) - bottom
+                cur_width = i - stack[-1] - 1
+                res += (cur_height * cur_width)
 
             stack.append(i)
 
