@@ -36,7 +36,7 @@ class Solution:  # 2.
                 sum_speed += s - heapq.heappushpop(heap, s)
             max_performance = max(max_performance, sum_speed * e)
 
-        return max_performance % (1000000007)
+        return max_performance % 1000000007
 
 
 n = 6
@@ -44,3 +44,5 @@ speed = [2, 10, 3, 1, 5, 8]
 efficiency = [5, 4, 3, 9, 7, 2]
 k = 2
 print(Solution().maxPerformance(n, speed, efficiency, k))
+
+print(10 ^ 9)
