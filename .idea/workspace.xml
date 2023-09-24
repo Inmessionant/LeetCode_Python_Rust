@@ -73,29 +73,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.206. 反转链表">
-    <configuration name="1383. 最大的团队表现值" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="LeetCode-Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems/1383. 最大的团队表现值.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.329. 矩阵中的最长递增路径">
     <configuration name="203. 移除链表元素" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="LeetCode-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -162,6 +140,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="329. 矩阵中的最长递增路径" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="LeetCode-Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems/329. 矩阵中的最长递增路径.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="502. IPO" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="LeetCode-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -186,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.329. 矩阵中的最长递增路径" />
         <item itemvalue="Python.206. 反转链表" />
         <item itemvalue="Python.203. 移除链表元素" />
         <item itemvalue="Python.253. 会议室 II" />
         <item itemvalue="Python.502. IPO" />
-        <item itemvalue="Python.1383. 最大的团队表现值" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +229,7 @@
       <workItem from="1693640869478" duration="326000" />
       <workItem from="1693641224718" duration="1749000" />
       <workItem from="1693839555190" duration="21758000" />
-      <workItem from="1694699660306" duration="7880000" />
+      <workItem from="1694699660306" duration="9410000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -271,6 +271,7 @@
     <SUITE FILE_PATH="coverage/LeetCode_Python$739__.coverage" NAME="739. 每日温度 Coverage Results" MODIFIED="1693641709001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$394__.coverage" NAME="394. 字符串解码 Coverage Results" MODIFIED="1693280318539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$703___K_.coverage" NAME="703. 数据流中的第 K 大元素 Coverage Results" MODIFIED="1694265967186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
+    <SUITE FILE_PATH="coverage/LeetCode_Python$329__.coverage" NAME="329. 矩阵中的最长递增路径 Coverage Results" MODIFIED="1695564426418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$209__.coverage" NAME="209. 长度最小的子数组 Coverage Results" MODIFIED="1692887442401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$378___K_.coverage" NAME="378. 有序矩阵中第 K 小的元素 Coverage Results" MODIFIED="1694267228307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$253___II.coverage" NAME="253. 会议室 II Coverage Results" MODIFIED="1694529751124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
