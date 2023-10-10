@@ -73,8 +73,8 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.542. 01 矩阵">
-    <configuration name="1575. 统计所有可行路径" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.40. 组合总和 II">
+    <configuration name="39. 组合总和" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="LeetCode-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -87,7 +87,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems/1575. 统计所有可行路径.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems/39. 组合总和.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -96,7 +96,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="200. 岛屿数量" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="40. 组合总和 II" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="LeetCode-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -109,7 +109,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems/200. 岛屿数量.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems/40. 组合总和 II.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -140,28 +140,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="576. 出界的路径数" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="LeetCode-Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems/576. 出界的路径数.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="695. 岛屿的最大面积" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="LeetCode-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -184,13 +162,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="934. 最短的桥" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="LeetCode-Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems/934. 最短的桥.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.40. 组合总和 II" />
+        <item itemvalue="Python.39. 组合总和" />
+        <item itemvalue="Python.934. 最短的桥" />
         <item itemvalue="Python.542. 01 矩阵" />
         <item itemvalue="Python.695. 岛屿的最大面积" />
-        <item itemvalue="Python.1575. 统计所有可行路径" />
-        <item itemvalue="Python.576. 出界的路径数" />
-        <item itemvalue="Python.200. 岛屿数量" />
       </list>
     </recent_temporary>
   </component>
@@ -231,6 +231,8 @@
       <workItem from="1693839555190" duration="21758000" />
       <workItem from="1694699660306" duration="13437000" />
       <workItem from="1695713304879" duration="3475000" />
+      <workItem from="1696683331158" duration="3623000" />
+      <workItem from="1696952287348" duration="87000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -275,10 +277,13 @@
     <SUITE FILE_PATH="coverage/LeetCode_Python$240___II.coverage" NAME="240. 搜索二维矩阵 II Coverage Results" MODIFIED="1690896897934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$1004__1_III.coverage" NAME="1004. 最大连续1的个数 III Coverage Results" MODIFIED="1692973413137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$1383__.coverage" NAME="1383. 最大的团队表现值 Coverage Results" MODIFIED="1694353399816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
+    <SUITE FILE_PATH="coverage/LeetCode_Python$39__.coverage" NAME="39. 组合总和 Coverage Results" MODIFIED="1696951312831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$154___II.coverage" NAME="154. 寻找旋转排序数组中的最小值 II Coverage Results" MODIFIED="1690898753041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$153__.coverage" NAME="153. 寻找旋转排序数组中的最小值 Coverage Results" MODIFIED="1690897772703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$227___II.coverage" NAME="227. 基本计算器 II Coverage Results" MODIFIED="1693236282284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
+    <SUITE FILE_PATH="coverage/LeetCode_Python$40___II.coverage" NAME="40. 组合总和 II Coverage Results" MODIFIED="1696951972841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$3__.coverage" NAME="3. 无重复字符的最长子串 Coverage Results" MODIFIED="1692977523784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
+    <SUITE FILE_PATH="coverage/LeetCode_Python$934__.coverage" NAME="934. 最短的桥 Coverage Results" MODIFIED="1696684921985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$150__.coverage" NAME="150. 逆波兰表达式求值 Coverage Results" MODIFIED="1693234314190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$912_.coverage" NAME="912.堆排序 覆盖结果" MODIFIED="1692027362981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$239__.coverage" NAME="239. 滑动窗口最大值 Coverage Results" MODIFIED="1693065030377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
