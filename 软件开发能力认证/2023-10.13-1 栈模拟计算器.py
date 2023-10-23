@@ -27,6 +27,7 @@ DIV（stack_name1，stack_name2）：将栈1和栈2栈顶数字相除，并将�
               栈顶无元素则返回-1，任意操作数值大于1024需要取模
 '''
 
+
 class Solution:
     def __init__(self):
         self.stack = [[] for _ in range(20)]
@@ -44,7 +45,7 @@ class Solution:
             stack1[-1] = cur_res
             return
         elif operate == "MUL":
-            cur_res = number1 *  number2
+            cur_res = number1 * number2
             if cur_res > 1024:
                 cur_res %= 1024
             stack1[-1] = cur_res
@@ -79,7 +80,3 @@ class Solution:
                 res.append(s[-1])
 
         return res
-
-
-
-
