@@ -1,6 +1,7 @@
 import collections
 from typing import List
 
+
 class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
 
@@ -20,13 +21,17 @@ class Solution:
                 queue.append(i)
 
         while queue:
-            ...
+            cur_node = queue.popleft()
+            res.append(cur_node)
+
+            for neighbor_node in graph_neighbor[cur_node]:
+                in_degree[neighbor_node] -= 1
+                if in_degree[neighbor_node] == 0:
+                    queue.append(neighbor_node)
 
         return res if len(res) == numCourses else []
-            
-
 
 
 numCourses = 4
-prerequisites = [[1,0],[2,0],[3,1],[3,2]]
+prerequisites = [[1, 0], [2, 0], [3, 1], [3, 2]]
 print(Solution().findOrder(numCourses, prerequisites))
