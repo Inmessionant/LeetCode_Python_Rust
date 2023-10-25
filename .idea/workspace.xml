@@ -73,29 +73,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.2023-10.13-2. 磁盘IO合并与拆分">
-    <configuration name="1013. 将数组分成和相等的三个部分" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="LeetCode-Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems/1013. 将数组分成和相等的三个部分.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.455. 分发饼干">
     <configuration name="2023-10.13-2. 磁盘IO合并与拆分" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="LeetCode-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -162,6 +140,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="455. 分发饼干" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="LeetCode-Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode_2023/leetcode_problems/455. 分发饼干.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="93. 复原 IP 地址" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="LeetCode-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -186,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.455. 分发饼干" />
         <item itemvalue="Python.2023-10.13-2. 磁盘IO合并与拆分" />
         <item itemvalue="Python.269. 火星词典" />
         <item itemvalue="Python.210. 课程表 II" />
         <item itemvalue="Python.93. 复原 IP 地址" />
-        <item itemvalue="Python.1013. 将数组分成和相等的三个部分" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +237,7 @@
       <workItem from="1697468294206" duration="7026000" />
       <workItem from="1697790457130" duration="5191000" />
       <workItem from="1698071788435" duration="4207000" />
-      <workItem from="1698076083821" duration="7532000" />
+      <workItem from="1698076083821" duration="8480000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -304,6 +304,7 @@
     <SUITE FILE_PATH="coverage/LeetCode_Python$76__.coverage" NAME="76. 最小覆盖子串 Coverage Results" MODIFIED="1692889155507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$59___II.coverage" NAME="59. 螺旋矩阵 II Coverage Results" MODIFIED="1691590060232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$27__.coverage" NAME="27. 移除元素 Coverage Results" MODIFIED="1692884669211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
+    <SUITE FILE_PATH="coverage/LeetCode_Python$455__.coverage" NAME="455. 分发饼干 Coverage Results" MODIFIED="1698247164483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$739__.coverage" NAME="739. 每日温度 Coverage Results" MODIFIED="1693641709001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$394__.coverage" NAME="394. 字符串解码 Coverage Results" MODIFIED="1693280318539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$703___K_.coverage" NAME="703. 数据流中的第 K 大元素 Coverage Results" MODIFIED="1694265967186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
