@@ -45,7 +45,7 @@ http://oj.rnd.huawei.com/problems/3599/details
 class Solution:
     def io_merge(self, sector_size: int, op_array: List[Tuple[int, int]]) -> List[Tuple[int, int]]:
 
-        if not op_array:  return []
+        if not op_array: return []
 
         op_array.sort(key=lambda x: x[0])
 
