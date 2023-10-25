@@ -42,7 +42,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -73,7 +73,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.269. 火星词典">
+  <component name="RunManager" selected="Python.2023-10.13-2. 磁盘IO合并与拆分">
     <configuration name="1013. 将数组分成和相等的三个部分" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="LeetCode-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -186,9 +186,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.2023-10.13-2. 磁盘IO合并与拆分" />
         <item itemvalue="Python.269. 火星词典" />
         <item itemvalue="Python.210. 课程表 II" />
-        <item itemvalue="Python.2023-10.13-2. 磁盘IO合并与拆分" />
         <item itemvalue="Python.93. 复原 IP 地址" />
         <item itemvalue="Python.1013. 将数组分成和相等的三个部分" />
       </list>
@@ -237,7 +237,7 @@
       <workItem from="1697468294206" duration="7026000" />
       <workItem from="1697790457130" duration="5191000" />
       <workItem from="1698071788435" duration="4207000" />
-      <workItem from="1698076083821" duration="4076000" />
+      <workItem from="1698076083821" duration="6848000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -319,7 +319,7 @@
     <SUITE FILE_PATH="coverage/LeetCode_Python$200__.coverage" NAME="200. 岛屿数量 Coverage Results" MODIFIED="1695651581686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$35__.coverage" NAME="35. 搜索插入位置 Coverage Results" MODIFIED="1690556452921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$15__.coverage" NAME="15. 三数之和 Coverage Results" MODIFIED="1692795194594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
-    <SUITE FILE_PATH="coverage/LeetCode_Python$2023_10_13_2__IO.coverage" NAME="2023-10.13-2. 磁盘IO合并与拆分 Coverage Results" MODIFIED="1698117612968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/软件开发能力认证" />
+    <SUITE FILE_PATH="coverage/LeetCode_Python$2023_10_13_2__IO.coverage" NAME="2023-10.13-2. 磁盘IO合并与拆分 Coverage Results" MODIFIED="1698245320468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/软件开发能力认证" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$1047__.coverage" NAME="1047. 删除字符串中的所有相邻重复项 Coverage Results" MODIFIED="1693147363376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$283__.coverage" NAME="283. 移动零 Coverage Results" MODIFIED="1692793445368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$576__.coverage" NAME="576. 出界的路径数 Coverage Results" MODIFIED="1695714868598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
