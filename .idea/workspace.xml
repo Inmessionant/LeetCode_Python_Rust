@@ -73,7 +73,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.684. 冗余连接">
+  <component name="RunManager" selected="Python.2023-09.08-1 浏览历史">
     <configuration name="1005. K 次取反后最大化的数组和" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="LeetCode-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -96,7 +96,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="2023-10.13-2. 磁盘IO合并与拆分" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="2023-09.08-1 浏览历史" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="LeetCode-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -109,7 +109,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/软件开发能力认证/2023-10.13-2. 磁盘IO合并与拆分.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/软件开发能力认证/2023-09.08-1 浏览历史.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -186,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.2023-09.08-1 浏览历史" />
         <item itemvalue="Python.684. 冗余连接" />
         <item itemvalue="Python.547. 省份数量" />
         <item itemvalue="Python.1005. K 次取反后最大化的数组和" />
         <item itemvalue="Python.455. 分发饼干" />
-        <item itemvalue="Python.2023-10.13-2. 磁盘IO合并与拆分" />
       </list>
     </recent_temporary>
   </component>
@@ -343,5 +343,6 @@
     <SUITE FILE_PATH="coverage/LeetCode_Python$542__01_.coverage" NAME="542. 01 矩阵 Coverage Results" MODIFIED="1695825512756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$69__x_.coverage" NAME="69. x 的平方根 Coverage Results" MODIFIED="1690691244877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
     <SUITE FILE_PATH="coverage/LeetCode_Python$155__.coverage" NAME="155. 最小栈 Coverage Results" MODIFIED="1693108129806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode_2023/leetcode_problems" />
+    <SUITE FILE_PATH="coverage/LeetCode_Python$2023_09_08_1_.coverage" NAME="2023-09.08-1 浏览历史 Coverage Results" MODIFIED="1698565911043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/软件开发能力认证" />
   </component>
 </project>
