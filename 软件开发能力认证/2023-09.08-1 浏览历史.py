@@ -1,6 +1,9 @@
 class BrowserHistorySys:
     def __init__(self, homepage: str, max_count: int):
-        pass
+        
+        self.maxcount = max_count
+        self.visited_page = [homepage]
+        self.cur_page = homepage
 
     def visit(self, url: str) -> int:
         return 0
