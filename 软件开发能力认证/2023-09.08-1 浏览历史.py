@@ -43,25 +43,24 @@ class BrowserHistorySys:
         return self.cur_page
 
 
-obj = BrowserHistorySys("w3.huawei.com", 10)
+obj1 = BrowserHistorySys("w3.huawei.com", 10)
 print(
-    obj.visit("google.com"),
-    obj.back(),
-    obj.forward(),
-    obj.forward(),
-    obj.visit("baidu.com"),
-    obj.visit("youtube.com"),
-    obj.back(),
-    obj.visit("baidu.com"),
-    obj.back(),
-    obj.visit("mails.huawei.com"))
+    obj1.visit("google.com"),
+    obj1.back(),
+    obj1.forward(),
+    obj1.forward(),
+    obj1.visit("baidu.com"),
+    obj1.visit("youtube.com"),
+    obj1.back(),
+    obj1.visit("baidu.com"),
+    obj1.back(),
+    obj1.visit("mails.huawei.com"))
 
-
-obj = BrowserHistorySys("www.huawei.com", 3)
+obj2 = BrowserHistorySys("www.huawei.com", 3)
 print(
-    obj.visit("w3.huawei.com"),
-    obj.visit("w4.huawei.com"),
-    obj.back(),
-    obj.visit("www.huawei.com"),
-    obj.visit("w5.huawei.com"),
-    obj.visit("w6.huawei.com"))
+    obj2.visit("w3.huawei.com"),
+    obj2.visit("w4.huawei.com"),
+    obj2.back(),
+    obj2.visit("www.huawei.com"),
+    obj2.visit("w5.huawei.com"),
+    obj2.visit("w6.huawei.com"))

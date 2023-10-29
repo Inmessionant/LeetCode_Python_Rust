@@ -22,8 +22,8 @@ class MyQueue:
         return not self.stack and not self.cache
 
 # Your MyQueue object will be instantiated and called as such:
-# obj = MyQueue()
-# obj.push(x)
-# param_2 = obj.pop()
-# param_3 = obj.peek()
-# param_4 = obj.empty()
+# obj2 = MyQueue()
+# obj2.push(x)
+# param_2 = obj2.pop()
+# param_3 = obj2.peek()
+# param_4 = obj2.empty()
