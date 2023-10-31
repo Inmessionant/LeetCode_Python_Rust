@@ -11,8 +11,8 @@ class Solution:
         for start, end, weight in times:
             graph[start].append((weight, end))
 
-        SPT = {}  # shortest path tree，存的是到每个节点最短时间
-        min_heap = [(0, k)]  # 从节点k出发，到节点n的delay
+        SPT = {}  # shortest path tree，存的是k到每个节点最短时间
+        min_heap = [(0, k)]  # 存储从节点k出发，到节点n的delay
 
         while min_heap:
             # 注意使用heappop弹出每次距离最短的，如果对应的node没有到达过，则对他进行更新
