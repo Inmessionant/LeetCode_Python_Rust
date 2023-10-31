@@ -20,7 +20,7 @@ class Solution:
             if node not in SPT:
                 SPT[node] = delay
                 for time, next_node in graph[node]:
-                    if next_node not in SPT: # 如果next_node存在spt，则在此之前一定有条路可以到达节点next_node
+                    if next_node not in SPT: # 如果next_node存在spt，则在此之前一定有条路可以到达节点next_node，此处相当于剪枝
                         heapq.heappush(min_heap, (delay + time, next_node))
 
         return max(SPT.values()) if len(SPT) == n else -1
