@@ -1,10 +1,23 @@
+import heapq
 from typing import List
 
 
 class Solution:
     def get_least_vm_num(self, cpu_core: int, service_a: List[int], service_b: List[int]) -> int:
-        
-        return 0
+
+        res = 0
+
+        min_heap = service_a.copy()
+        heapq.heapify(min_heap)
+
+        for cur_service in sorted(service_b, reverse=True):
+            if not min_heap or cur_service + min_heap[0] > cpu_core:
+                heapq.heappush(min_heap, cur_service)
+            else:
+                heapq.heappop(min_heap)
+                res += 1
+
+        return res + len(min_heap)
 
 
 if __name__ == "__main__":
