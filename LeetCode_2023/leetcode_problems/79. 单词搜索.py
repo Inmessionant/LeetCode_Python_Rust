@@ -2,32 +2,54 @@ from functools import lru_cache
 from typing import List
 
 
-class Solution:
-    def exist(self, board: List[List[str]], word: str) -> bool:
+class Solution(object):
+    # 定义上下左右四个行走方向
+    directs = [(0, 1), (0, -1), (1, 0), (-1, 0)]
 
-        @lru_cache(None)
-        def DFS(i, j, k):
-            if board[i][j] != word[k]:
-                return False
-            if len(word) - 1 == k:
-                return True
-
-            for x, y in directs:
-                curx, cury = x + i, y + j
-                if 0 <= curx < rows and 0 <= cury < cols:
-                    if DFS(curx, cury, k + 1):
-                        print(curx, cury, k + 1)
-                        return True
+    def exist(self, board, word):
+        """
+        :type board: List[List[str]]
+        :type word: str
+        :rtype: bool
+        """
+        m = len(board)
+        if m == 0:
             return False
+        n = len(board[0])
+        mark = [[0 for _ in range(n)] for _ in range(m)]
 
-        rows, cols = len(board), len(board[0])
-        directs = [(-1, 0), (1, 0), (0, -1), (0, 1)]
-
-        for i in range(rows):
-            for j in range(cols):
+        for i in range(len(board)):
+            for j in range(len(board[0])):
                 if board[i][j] == word[0]:
-                    if DFS(i, j, 0):
+                    # 将该元素标记为已使用
+                    mark[i][j] = 1
+                    if self.backtrack(i, j, mark, board, word[1:]) == True:
                         return True
+                    else:
+                        # 回溯
+                        mark[i][j] = 0
+        return False
+
+    def backtrack(self, i, j, mark, board, word):
+        if len(word) == 0:
+            return True
+
+        for direct in self.directs:
+            cur_i = i + direct[0]
+            cur_j = j + direct[1]
+
+            if cur_i >= 0 and cur_i < len(board) and cur_j >= 0 and cur_j < len(board[0]) and board[cur_i][cur_j] == \
+                    word[0]:
+                # 如果是已经使用过的元素，忽略
+                if mark[cur_i][cur_j] == 1:
+                    continue
+                # 将该元素标记为已使用
+                mark[cur_i][cur_j] = 1
+                if self.backtrack(cur_i, cur_j, mark, board, word[1:]) == True:
+                    return True
+                else:
+                    # 回溯
+                    mark[cur_i][cur_j] = 0
         return False
 
 
