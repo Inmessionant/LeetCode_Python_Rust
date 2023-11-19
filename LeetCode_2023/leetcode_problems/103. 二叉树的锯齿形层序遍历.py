@@ -31,9 +31,9 @@ class Solution:
             for _ in range(size):
                 node = queue.popleft()
                 cur_res.append(node.val)
-                if node.left:
+                if node.left and node.left.val != None:
                     queue.append(node.left)
-                if node.right:
+                if node.right and node.right.val != None:
                     queue.append(node.right)
 
             if reversed:
@@ -43,3 +43,11 @@ class Solution:
 
         return res
 
+
+root = [3, 9, 20, None, None, 15, 7]
+nodes = [TreeNode(val=i) for i in root]
+for i in range(len(nodes) // 2):
+    nodes[i].left = nodes[2 * i + 1]
+    nodes[i].right = nodes[2 * i + 2]
+
+print(Solution().zigzagLevelOrder(nodes[0]))
