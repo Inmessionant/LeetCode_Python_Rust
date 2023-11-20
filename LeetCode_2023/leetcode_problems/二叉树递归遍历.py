@@ -34,4 +34,4 @@ for i in range(len(nodes) // 2):
     nodes[i].left = nodes[2 * i + 1]
     nodes[i].right = nodes[2 * i + 2]
 
-print(Solution().preorderTraversal(nodes[0]))  # 传进去是nodes[0]
+print(Solution().preorderTraversal(nodes[0]))     # 传进去是nodes[0]
