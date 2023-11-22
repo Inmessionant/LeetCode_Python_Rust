@@ -22,7 +22,7 @@ class StorageSystem:
         self.cleared = {}
 
     def store(self, date: int, storage_id: int, storage_type: int, storage_days: int) -> int:
-
+        # store里面update是为了time时把位置空出来 让新存的有地方
         self.update_storage(date)
         if storage_type == 0:  # cold
             if self.store_info[0][0] > 0:
@@ -47,7 +47,7 @@ class StorageSystem:
             return -1
 
     def retrieve(self, date: int, storage_id: int) -> int:
-
+        # retrieve指定了对应的订单处理 本身会更新与本次操作有关的三种状态存单的数量 不用额外去全量update
         if not self.instorage.get(storage_id):  # 可能已经被拿出去了
             return -1
         entity = self.instorage.pop(storage_id)
@@ -69,6 +69,7 @@ class StorageSystem:
             return -1
 
     def query(self, date: int):
+        # query里面update是为了获取最新time的三种状态存单的数量
         self.update_storage(date)
         return len(self.success_put), len(self.instorage), len(self.cleared)
 
