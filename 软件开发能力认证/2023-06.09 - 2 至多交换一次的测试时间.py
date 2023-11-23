@@ -11,7 +11,7 @@ class Solution:
         for i in range(len_board):
             for j in range(len_board):
                 number_loc[board[i][j]].append((i, j))
-
+        # 存储每行每列还需要亮灯数，初始化为len_board，即全部没有亮
         number_to_light_row, number_to_light_col = [len_board] * len_board, [len_board] * len_board
 
         total_light = 0
