@@ -16,22 +16,24 @@ class DirPermSystem:
         self.node_map = {}
 
         for idx, parent in enumerate(path):
-            curnode = Node(idx)
-            self.node_map[idx] = curnode
+            if idx not in self.node_map:
+                curnode = Node(idx)
+                self.node_map[idx] = curnode
             if parent not in self.node_map:
                 parent_node = Node(parent)
                 self.node_map[parent] = parent_node
             self.node_map[parent].child.append(curnode)
-            print(self.node_map[idx].id, self.node_map[parent].id)
+
+            # print("==========", idx)
+            # print(self.node_map[idx].id, self.node_map[parent].id)
 
         for i in range(len(statuses)):
             self.node_map[i].status = statuses[i]
 
-        for key, value in self.node_map.items():
-            print("====")
-            print("key=", key)
-            for child in value.child:
-                print("child： ", child.id)
+        # for key, value in self.node_map.items():
+        #     print("key=", key)
+        #     for child in value.child:
+        #         print("child： ", child.id)
 
     def change_status(self, dir_id: int, status: int) -> None:
 
@@ -87,8 +89,8 @@ class DirPermSystem:
 path = [-1, 4, 4, 1, 0]
 statuses = [-1, 4, 4, 1, 0]
 obj = DirPermSystem(path, statuses)
-# print(obj.grant_right(101, 1))
-# print(obj.change_status(1, 2))
-# print(obj.query_right(101, 3))
-# print(obj.query_num(101))
-# print(obj.remove_right(101, 1))
+print(obj.grant_right(101, 1))
+print(obj.change_status(1, 2))
+print(obj.query_right(101, 3))
+print(obj.query_num(101))
+print(obj.remove_right(101, 1))
