@@ -3,31 +3,35 @@ from typing import List
 
 
 class Node:
-    def __init__(self, id, status, child=[]):
+    def __init__(self, id, status=1):
         self.id = id
         self.status = status
-        self.child = child
+        self.child = []
 
 
 class DirPermSystem:
 
     def __init__(self, path: List[int], statuses: List[int]):
         self.user_dirs = collections.defaultdict(list)
-        self.node_map = dict()
+        self.node_map = {}
 
         for idx, parent in enumerate(path):
-            curnode = Node(idx, statuses[idx])
+            curnode = Node(idx)
             self.node_map[idx] = curnode
             if parent not in self.node_map:
-                parent_node = Node(parent, statuses[parent])
+                parent_node = Node(parent)
                 self.node_map[parent] = parent_node
-            parent_node.child.append(curnode)
+            self.node_map[parent].child.append(curnode)
+            print(self.node_map[idx].id, self.node_map[parent].id)
 
+        for i in range(len(statuses)):
+            self.node_map[i].status = statuses[i]
 
         for key, value in self.node_map.items():
+            print("====")
             print("key=", key)
             for child in value.child:
-                print("child ", child.id)
+                print("child： ", child.id)
 
     def change_status(self, dir_id: int, status: int) -> None:
 
