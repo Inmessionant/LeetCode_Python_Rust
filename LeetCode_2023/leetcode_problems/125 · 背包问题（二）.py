@@ -1,5 +1,14 @@
 class Solution:
     def back_pack_i_i(self, bagweight, weight, value):
+        len_weight, len_bagweight = len(weight), bagweight
+        dp = [0 for _ in range(len_bagweight + 1)]
+
+        for i in range(len_weight):
+            for j in range(len_bagweight, weight[i] - 1, -1):
+                dp[j] = max(dp[j], dp[j - weight[i]] + value[i])
+
+        return dp[-1]
+    def back_pack_i_i(self, bagweight, weight, value):
 
         len_weight, len_bagweight = len(weight), bagweight
         dp = [[0 for _ in range(len_bagweight + 1)] for _ in range(len_weight)]
