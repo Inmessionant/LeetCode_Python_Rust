@@ -1,7 +1,40 @@
+import collections
 from typing import Tuple, List
 
 
 class Solution:
 
     def get_check_points(self, nodes: List[Tuple[int, List[int]]], key_nodes: List[int], org: int) -> List[int]:
-        ...
+
+        node_dicts = {}
+
+        for node_rel in nodes:
+            node_dicts[node_rel[0]] = node_rel[1]
+
+        queue = collections.deque([org])
+        coll_nodes = []
+
+        while queue:
+            node = queue.popleft()
+            if node not in coll_nodes:
+                coll_nodes.append(node)
+                for node in node_dicts[node]:
+                    queue.append(node)
+
+        # print(coll_nodes)  # [60, 20, 10]
+
+
+
+nodes = [
+    [20, [10]],
+    [10, []],
+    [30, [10, 20]],
+    [60, [20]],
+    [40, [80, 30]],
+    [50, [30]],
+    [80, []]
+]
+
+key_nodes = [30, 10, 80]
+org = 60
+print(Solution().get_check_points(nodes, key_nodes, org))
