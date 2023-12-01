@@ -32,7 +32,11 @@ class FlowchartSys:  # 只保存手工建立的链接，自动建立的链接没
             return False
 
     def remove_connection(self, connect_id: int) -> bool:
-        ...
+        if connect_id in self.connections:
+            self.connections.pop(connect_id)
+            return True
+        else:
+            return False
 
     def remove_node(self, node_id: int) -> bool:
         ...
