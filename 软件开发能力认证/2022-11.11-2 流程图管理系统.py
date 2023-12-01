@@ -41,11 +41,14 @@ class FlowchartSys:  # 只保存手工建立的链接，自动建立的链接没
     def remove_node(self, node_id: int) -> bool:
 
         if node_id in self.node_map:
-            ...
+            self.node_map.pop(node_id)
+            for key, value in list(self.connections.items()):
+                if value[0] == node_id or value[1] == node_id:
+                    self.connections.pop(key)
+            return True
+
         else:
             return False
-
-
 
     def query(self, node_id: int) -> List[int]:
         ...
