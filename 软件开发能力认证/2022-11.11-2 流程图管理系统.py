@@ -1,3 +1,4 @@
+import collections
 from typing import List
 
 
@@ -7,7 +8,7 @@ class Node():
         self.type = type
 
 
-class FlowchartSys: # 只保存手工建立的链接，
+class FlowchartSys:  # 只保存手工建立的链接，自动建立的链接没有connect_id，只有在query时候用
     def __init__(self):
         self.node_map = dict()
         self.connections = dict()
@@ -19,10 +20,16 @@ class FlowchartSys: # 只保存手工建立的链接，
             self.node_map[node_id] = new_node
             return True
         else:
-
+            return False
 
     def add_connection(self, connect_id: int, start_node_id: int, end_node_id: int) -> bool:
-        ...
+
+        if (start_node_id in self.node_map and end_node_id in self.node_map and start_node_id != end_node_id and
+                connect_id not in self.connections):
+            self.connections[connect_id] = (start_node_id, end_node_id)
+            return True
+        else:
+            return False
 
     def remove_connection(self, connect_id: int) -> bool:
         ...
