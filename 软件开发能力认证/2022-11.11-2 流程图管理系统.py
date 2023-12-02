@@ -51,7 +51,8 @@ class FlowchartSys:  # 只保存手工建立的链接，自动建立的链接没
             return False
 
     def query(self, node_id: int) -> List[int]:
-        ...
+
+        res = []
 
 
 obj = FlowchartSys()
