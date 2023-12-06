@@ -14,8 +14,8 @@ class Solution:
             else:
                 while time in status[idx - 1]:
                     status[idx - 1].pop()
-
-        return len(set(status[0]) & (set(status[1]) | set(status[2])))
+        status_final = set(status[0]).intersection(set(status[1]).union(set(status[2])))
+        return len(status_final)
 
 
 records = [[0, 1],
