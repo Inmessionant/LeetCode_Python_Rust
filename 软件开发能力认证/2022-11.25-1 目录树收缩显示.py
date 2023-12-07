@@ -30,24 +30,26 @@ class Solution:
                     queue.append(neighbor)
         return res
 
-    # def levelPrint(self, root):
-    #
-    #     queue = collections.deque()
-    #     queue.append(root)
-    #     res = []
-    #     level = 0
-    #
-    #     while queue:
-    #         size = len(queue)
-    #         level += 1
-    #         for _ in range(size):
-    #             node = queue.popleft()
-    #             res.append(node.node_str)
-    #             for neighbor in node.childs:
-    #                 queue.append(neighbor)
-    #     return res
+    def levelPrint(self, root):
+
+        queue = collections.deque()
+        queue.append(root)
+        res = []
+        level = 0
+
+        while queue:
+            size = len(queue)
+            level += 1
+            for _ in range(size):
+                node = queue.popleft()
+                res.append(node.node_str)
+                for neighbor in node.childs:
+                    queue.append(neighbor)
+        return res
 
     def mergeTree(self, root):
+
+        if not root: return
 
         node = root
         len_child = len(node.childs)
@@ -56,10 +58,9 @@ class Solution:
             node.node_str = node.node_str + "/" + node.childs[0].node_str
             node.childs = node.childs[0].childs
             self.mergeTree(node)
-            return
-
-        for child in node.childs:
-            self.mergeTree(child)
+        else:
+            for child in node.childs:
+                self.mergeTree(child)
 
     def get_nodes_num(self, org_tree: List[Tuple[str]], depth: int) -> int:
 
@@ -71,11 +72,11 @@ class Solution:
                 self.node_map[child] = Node(child)
             self.node_map[parent].childs.append(self.node_map[child])
 
-        # print("before:", self.levelPrint(self.node_map["root"]))
+        print("before:", self.levelPrint(self.node_map["root"]))
         # 开始收缩树
         self.mergeTree(self.node_map["root"])
 
-        # print("after:", self.levelPrint(self.node_map["root"]))
+        print("after:", self.levelPrint(self.node_map["root"]))
 
         return self.levelorder(self.node_map["root"], depth)  # 累计depth树的深度
 
