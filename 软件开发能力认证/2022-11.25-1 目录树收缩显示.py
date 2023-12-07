@@ -16,19 +16,19 @@ class Solution:
 
         queue = collections.deque()
         queue.append(root)
-        res = 0
         level = 0
 
         while queue:
             size = len(queue)
             level += 1
+
+            if level == depth:
+                return size
+
             for _ in range(size):
                 node = queue.popleft()
-                if level == depth:
-                    res += 1
                 for neighbor in node.childs:
                     queue.append(neighbor)
-        return res
 
     def levelPrint(self, root):
 
