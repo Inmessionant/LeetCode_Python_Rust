@@ -45,7 +45,7 @@ class RentingSystem:
                 dist = abs(address[0] - value.address[0]) + abs(address[1] - value.address[1])
                 availd_rooms.append([value.id, value.area, value.price, dist])
 
-        order_by.append([0, 1]) # default order: id
+        order_by.append([0, 1])  # default order: id
 
         availd_rooms.sort(key=lambda x: [x[order[0]] * order[1] for order in order_by])
 
