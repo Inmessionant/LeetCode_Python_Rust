@@ -49,7 +49,8 @@ class Solution:
 
     def mergeTree(self, root):
 
-        if not root: return
+        if not root:
+            return
 
         node = root
         len_child = len(node.childs)
