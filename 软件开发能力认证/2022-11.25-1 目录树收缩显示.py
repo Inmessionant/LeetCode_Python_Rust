@@ -42,7 +42,7 @@ class Solution:
             level += 1
             for _ in range(size):
                 node = queue.popleft()
-                res.append((level, node.node_str))
+                res.append("level:{}-{}".format(level, node.node_str))
                 for neighbor in node.childs:
                     queue.append(neighbor)
         return res
