@@ -27,7 +27,7 @@ class TextFileSys:
         if filename in self.file_mgr:
             cur_file = self.file_mgr.get(filename)
             if not cur_file.state:
-                if self.rule[mode][0]: cur_file.content = ""  # 忘记判断这玩意了
+                if self.rule[mode][0]:  cur_file.content = ""  # 打开时需要判断是否清空内容
                 cur_file.state = True
                 cur_file.pos = 0 if self.rule[mode][1] == 'start' else len(cur_file.content)
                 cur_file.read, cur_file.write = self.rule[mode][2], self.rule[mode][3]

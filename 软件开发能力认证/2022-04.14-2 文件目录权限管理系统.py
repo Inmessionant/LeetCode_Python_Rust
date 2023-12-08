@@ -13,15 +13,14 @@ class Node:
 class DirPermSystem:
 
     def __init__(self, path: List[int], statuses: List[int]):
+
         self.node_map = {}
 
         for idx, parent in enumerate(path):
             if idx not in self.node_map:
-                curnode = Node(idx)
-                self.node_map[idx] = curnode
+                self.node_map[idx] = Node(idx)
             if parent not in self.node_map:
-                parent_node = Node(parent)
-                self.node_map[parent] = parent_node
+                self.node_map[parent] = Node(parent)
             self.node_map[parent].child.append(self.node_map[idx])
 
         for i in range(len(statuses)):
