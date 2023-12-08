@@ -77,8 +77,7 @@ class DirPermSystem:
             if node.status == 1 or (node.status == 2 and user_id in node.owner):
                 res.append(node)
             for child in node.child:
-                if child:
-                    queue.append(child)
+                queue.append(child)
 
         return len(res)
 
