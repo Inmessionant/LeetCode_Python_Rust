@@ -6,7 +6,7 @@ class Solution:
     def earliest_completed_test(self, nums: List[int], board: List[List[int]]) -> int:
 
         len_nums, len_board = len(nums), len(board)
-        number_loc = collections.defaultdict(list)
+        number_loc = collections.defaultdict(list)  # 统计每个数字存储的坐标
 
         for i in range(len_board):
             for j in range(len_board):
@@ -15,8 +15,9 @@ class Solution:
         number_to_light_row, number_to_light_col = [len_board] * len_board, [len_board] * len_board
 
         total_light = 0
-        res = 1
+        res = 0
         for num in nums:
+            res += 1
             if number_loc.get(num):
                 for x, y in number_loc[num]:
 
@@ -30,7 +31,7 @@ class Solution:
                         return res
 
             number_loc[num].clear()
-            res += 1
+
 
         return -1
 

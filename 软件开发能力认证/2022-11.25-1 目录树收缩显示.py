@@ -63,9 +63,8 @@ class Solution:
             for child in node.childs:
                 self.mergeTree(child)
 
-    def get_nodes_num(self, org_tree: List[Tuple[str]], depth: int) -> int:
+    def buildTree(self, org_tree):
 
-        # 创建树
         for parent, child in org_tree:
             if parent not in self.node_map:
                 self.node_map[parent] = Node(parent)
@@ -73,13 +72,19 @@ class Solution:
                 self.node_map[child] = Node(child)
             self.node_map[parent].childs.append(self.node_map[child])
 
+    def get_nodes_num(self, org_tree: List[Tuple[str]], depth: int) -> int:
+
+        # 创建树
+        self.buildTree(org_tree)
+        # 打印树结构
         print("before:", self.levelPrint(self.node_map["root"]))
+
         # 开始收缩树
         self.mergeTree(self.node_map["root"])
-
+        # 打印收缩后树结构
         print("after:", self.levelPrint(self.node_map["root"]))
 
-        return self.levelorder(self.node_map["root"], depth)  # 累计depth树的深度
+        return self.levelorder(self.node_map["root"], depth)  # 层序遍历depth树节点个数
 
 
 org_tree = [
