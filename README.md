@@ -45,7 +45,8 @@ def function1(id):  # 子进程
 
 def run__process():  # 主进程
     process = [Process(target=function1, args=(1,)),
-               Process(target=function1, args=(2,))]
+               Process(target=function1, args=(2,))] # Process开启了多进程，不涉及进程通信
+    
     [p.start() for p in process]  # 开启了两个进程
     [p.join() for p in process]  # 等待两个进程依次结束
 
@@ -53,5 +54,37 @@ def run__process():  # 主进程
 # 正确做法：主线程只能写在if __name__ =='__main__'内部
 if __name__ == '__main__':
     run__process()
+    
+
+'''
+Process开启了多进程，不涉及进程通信，当把一个串行任务编排成多进程时，还需要多进程通信：
+  - 进程池Pool 可以让主程序获得子进程的计算结果；（不灵活）
+  - 管道Pipe 队列Queue 等可以让进程之间进行通信；（灵活）
+  - 共享值Value 共享数组Array 共享内容shared_memory；
+'''
 ```
+
+
+
+Python多进程可以选择两种创建进程的方式：
+
+- **fork：**会直接复制一份自己给子进程运行，并把自己所有资源的handle 都让子进程继承；
+- **spawn：**只会把必要的资源的handle 交给子进程；
+
+```python
+multiprocessing.set_start_method('spawn')  # default on WinOS or MacOS 创建速度快，但更占内存
+multiprocessing.set_start_method('fork')   # default on Linux (UnixOS) 创建速度快，但更占内存
+```
+
+
+
+**进程池Pool**
+
+
+
+
+
+
+
+
 
