@@ -123,7 +123,7 @@ if __name__ == '__main__':
 
 **管道Pipe**
 
-管道的两端可以放在主进程或子进程内，两端可以同时放进去东西，放进去的对象都经过了深拷贝：用 conn.send()在一端放入，用 conn.recv() 另一端取出，管道的两端可以同时给多个进程。
+管道的两端可以放在主进程或子进程内，两端可以同时放进去东西，放进去的对象都经过了深拷贝：用 conn.send()在一端放入，用 conn.recv() 另一端取出，管道的两端可以同时给多个进程（如果追求运行速度，推荐使用Pipe而不是Queue）
 
 ```python
 import time
@@ -164,7 +164,7 @@ def func_pipe2(conn, p_id):
 def run__pipe():
     main_conn, child_conn = Pipe()
 
-    process = [Process(target=func_pipe1, args=(main_conn, 'pid_1')),
+    process = [Process(target=func_pipe1, args=(main_conn,  'pid_1')),
                Process(target=func_pipe2, args=(child_conn, 'pid_2')),
                Process(target=func_pipe2, args=(child_conn, 'pid_3')), ]
 
@@ -222,5 +222,40 @@ main_conn.send('A')
 print(main_conn.poll())  # 会print出 False，因为没有东西等待main_conn去接收
 print(child_conn.poll())  # 会print出 True ，因为main_conn send 了个 'A' 等着child_conn 去接收
 print(child_conn.recv(), child_conn.poll(2))  # 会等待2秒钟再开始查询，然后print出 'A False'
+```
+
+
+
+**队列Queue**
+
+无论主进程或子进程，都能访问到队列，放进去的对象都经过了深拷贝，队列Queue 有基本的队列属性，更加灵活。
+
+```python
+import time
+from multiprocessing import Process, Queue
+
+
+def func1(i):
+    time.sleep(1)
+    print(f'args {i}\n')
+
+
+def run__queue():
+    queue = Queue(maxsize=4)  # the following attribute can call in anywhere
+    queue.put(True)
+    queue.put([0, None, object])  # you can put deepcopy thing
+    print("the length of Queue is: ", queue.qsize())
+    print(queue.get())  # First In First Out
+    print(queue.get())  # First In First Out
+    print("the length of Queue is: ", queue.qsize())
+
+    process = [Process(target=func1, args=(queue,)),
+               Process(target=func1, args=(queue,)), ]
+    [p.start() for p in process]
+    [p.join() for p in process]
+
+
+if __name__ == '__main__':
+    run__queue()
 ```
 
