@@ -213,5 +213,14 @@ func_pipe1 pid_1 end=================
 '''
 ```
 
+```python
+from multiprocessing import Pipe
 
+main_conn, child_conn = Pipe(duplex=True)  # 开启双向管道，管道两端都能存取数据。默认开启
+
+main_conn.send('A')
+print(main_conn.poll())  # 会print出 False，因为没有东西等待main_conn去接收
+print(child_conn.poll())  # 会print出 True ，因为main_conn send 了个 'A' 等着child_conn 去接收
+print(child_conn.recv(), child_conn.poll(2))  # 会等待2秒钟再开始查询，然后print出 'A False'
+```
 
