@@ -37,6 +37,29 @@
 
 ```python
 from multiprocessing import Process
+import os
+
+def info(title):
+    print(title)
+    print('module name:', __name__)
+    print('parent process:', os.getppid())
+    print('process id:', os.getpid())
+
+def f(name):
+    info('function f')
+    print('hello', name)
+
+if __name__ == '__main__':
+    info('main line')
+    p = Process(target=f, args=('bob',))
+    p.start()
+    p.join()
+```
+
+
+
+```python
+from multiprocessing import Process
 
 
 def function1(id):  # 子进程
@@ -47,7 +70,7 @@ def run__process():  # 主进程
     process = [Process(target=function1, args=(1,)),
                Process(target=function1, args=(2,))] # Process开启了多进程，不涉及进程通信
     
-    [p.start() for p in process]  # 开启了两个进程
+    [p.start() for p in process]  # 生成了两个进程
     [p.join() for p in process]  # 等待两个进程依次结束
 
 
@@ -66,10 +89,10 @@ Process开启了多进程，不涉及进程通信，当把一个串行任务编�
 
 
 
-Python多进程可以选择两种创建进程的方式：
+**上下文和启动方法：**
 
-- **fork：**会直接复制一份自己给子进程运行，并把自己所有资源的handle 都让子进程继承；
-- **spawn：**只会把必要的资源的handle 交给子进程；
+- **fork：**父进程产生 Python 解释器分叉。子进程在开始时实际上与父进程相同。父进程的所有资源都由子进程继承；
+- **spawn：**父进程会启动一个新的 Python 解释器进程，子进程将只继承那些运行进程对象的 [`run()`](https://docs.python.org/zh-cn/3/library/multiprocessing.html#multiprocessing.Process.run) 方法所必须的资源。 特别地，来自父进程的非必需文件描述符和句柄将不会被继承；
 
 ```python
 multiprocessing.set_start_method('spawn')  # default on WinOS or MacOS 创建速度快，但更占内存
@@ -81,10 +104,15 @@ multiprocessing.set_start_method('fork')   # default on Linux (UnixOS) 创建速
 **进程池Pool**
 
 ```python
-# 多进程需要调用Process，进程池Pool会自动管理子进程，Pool只会传入单个参数
-import multiprocessing
+# 多进程需要调用Process，进程池Pool会自动管理子进程
+from multiprocessing import Pool
 
-pool=multiprocessing.Pool(num)   # num代表进程池中的最大进程数
+def f(x):
+    return x*x
+
+if __name__ == '__main__':
+    with Pool(5) as p:
+        print(p.map(f, [1, 2, 3]))
 ```
 
 
@@ -257,5 +285,50 @@ def run__queue():
 
 if __name__ == '__main__':
     run__queue()
+```
+
+
+
+**共享内存Manager**
+
+为了在Python里面实现多进程通信，上面提及的 Pipe Queue 把需要通信的信息从内存里深拷贝了一份给其他线程使用（需要分发的线程越多，其占用的内存越多）。而共享内存会由解释器负责维护一块共享内存（而不用深拷贝），这块内存每个进程都能读取到，读写的时候遵守管理（因此不要以为用了共享内存就一定变快）。
+
+Manager可以创建一块共享的内存区域，但是存入其中的数据需要按照特定的格式，Value可以保存数值，Array可以保存数组。
+
+```python
+from multiprocessing import Process, Lock
+from multiprocessing.sharedctypes import Value, Array
+from ctypes import Structure, c_double
+
+
+class Point(Structure):
+    _fields_ = [('x', c_double), ('y', c_double)]
+
+
+def modify(n, x, s, A):
+    n.value **= 2
+    x.value **= 2
+    s.value = s.value.upper()
+    for a in A:
+        a.x **= 2
+        a.y **= 2
+
+
+if __name__ == '__main__':
+    lock = Lock()
+
+    n = Value('i', 7)
+    x = Value(c_double, 1.0 / 3.0, lock=False)
+    s = Array('c', b'hello world', lock=lock)
+    A = Array(Point, [(1.875, -6.25), (-5.75, 2.0), (2.375, 9.5)], lock=lock)
+
+    p = Process(target=modify, args=(n, x, s, A))
+    p.start()
+    p.join()
+
+    print(n.value)
+    print(x.value)
+    print(s.value)
+    print([(a.x, a.y) for a in A])
 ```
 
