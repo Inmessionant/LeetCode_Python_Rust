@@ -91,13 +91,9 @@ Process开启了多进程，不涉及进程通信，当把一个串行任务编�
 
 **上下文和启动方法：**
 
-- **fork：**父进程产生 Python 解释器分叉。子进程在开始时实际上与父进程相同。父进程的所有资源都由子进程继承；
-- **spawn：**父进程会启动一个新的 Python 解释器进程，子进程将只继承那些运行进程对象的 [`run()`](https://docs.python.org/zh-cn/3/library/multiprocessing.html#multiprocessing.Process.run) 方法所必须的资源。 特别地，来自父进程的非必需文件描述符和句柄将不会被继承；
-
-```python
-multiprocessing.set_start_method('spawn')  # default on WinOS or MacOS 创建速度快，但更占内存
-multiprocessing.set_start_method('fork')   # default on Linux (UnixOS) 创建速度快，但更占内存
-```
+- **fork：**父进程产生 Python 解释器分叉。子进程在开始时实际上与父进程相同，父进程的所有资源都由子进程继承； **- 创建速度快，但更占内存**
+- **spawn：**父进程会启动一个新的 Python 解释器进程，子进程将只继承那些运行进程对象的 [`run()`](https://docs.python.org/zh-cn/3/library/multiprocessing.html#multiprocessing.Process.run) 方法所必须的资源。 特别地，来自父进程的非必需文件描述符和句柄将不会被继承； **- 创建速度快，但更占内存**
+- 要选择一个启动方法，你应该在主模块的 `if __name__ == '__main__'` 子句中调用 [`set_start_method()`](https://docs.python.org/zh-cn/3/library/multiprocessing.html#multiprocessing.set_start_method)；
 
 
 
