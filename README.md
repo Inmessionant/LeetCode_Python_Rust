@@ -31,6 +31,25 @@
 4. Python 3.8，shared_memory；
 ```
 
+```python
+class multiprocessing.Process(group=None, target=None, name=None, args=(), kwargs={}, *, daemon=None)
+进程对象表示在单独进程中运行的活动，应始终使用关键字参数调用构造函数
+- group 应该始终是 None；
+- target是由run()方法调用的可调用对象。它默认为 None ，意味着什么都没有被调用；
+- name 是进程名称；
+- args 是目标调用的参数元组；
+
+
+start()
+启动进程活动，这个方法每个进程对象最多只能调用一次。它会将对象的 run() 方法安排在一个单独的进程中调用
+
+join([timeout])
+当我们需要等待所有子进程完成后再继续主进程时，可以使用join()函数来实现；
+如果可选参数 timeout 是 None （默认值），则该方法将阻塞，直到调用 join() 方法的进程终止。如果 timeout 是一个正数，它最多会阻塞 timeout 秒
+```
+
+
+
 
 
 **子进程Process**
@@ -70,7 +89,7 @@ def run__process():  # 主进程
     process = [Process(target=function1, args=(1,)),
                Process(target=function1, args=(2,))] # Process开启了多进程，不涉及进程通信
     
-    [p.start() for p in process]  # 生成了两个进程
+    [p.start() for p in process]  # 启动了两个进程
     [p.join() for p in process]  # 等待两个进程依次结束
 
 
@@ -111,8 +130,6 @@ if __name__ == '__main__':
         print(p.map(f, [1, 2, 3]))
 ```
 
-
-
 ```python
 # 函数 func2 需要传入多个参数，把它改成一个参数，无论直接让args作为一个元组tuple、词典dict、类class都可以
 import time
@@ -143,11 +160,17 @@ if __name__ == '__main__':
 
 ```
 
+```python
+
+```
 
 
-**管道Pipe**
 
-管道的两端可以放在主进程或子进程内，两端可以同时放进去东西，放进去的对象都经过了深拷贝：用 conn.send()在一端放入，用 conn.recv() 另一端取出，管道的两端可以同时给多个进程（如果追求运行速度，推荐使用Pipe而不是Queue）
+**进程间交换对象：管道Pipe**
+
+​    管道的两端可以放在主进程或子进程内，两端可以同时放进去东西，放进去的对象都经过了深拷贝：用 conn.send()在一端放入，用 conn.recv() 另一端取出，管道的两端可以同时给多个进程（如果追求运行速度，推荐使用Pipe而不是Queue）
+
+​    如果两个进程（或线程）同时尝试读取或写入管道的同一端，管道中的数据可能会损坏。在不同进程中同时使用管道的不同端的情况下不存在损坏的风险。
 
 ```python
 import time
@@ -250,11 +273,10 @@ print(child_conn.recv(), child_conn.poll(2))  # 会等待2秒钟再开始查询�
 
 
 
-**队列Queue**
-
-无论主进程或子进程，都能访问到队列，放进去的对象都经过了深拷贝，队列Queue 有基本的队列属性，更加灵活。
+**进程间交换对象：队列Queue**
 
 ```python
+# 无论主进程或子进程，都能访问到队列，放进去的对象都经过了深拷贝，队列Queue 有基本的队列属性，更加灵活，且队列是线程和进程安全的
 import time
 from multiprocessing import Process, Queue
 
@@ -285,14 +307,58 @@ if __name__ == '__main__':
 
 
 
+**进程间同步**
+
+```python
+from multiprocessing import Process, Lock
+
+
+def f(l, i):
+    l.acquire()
+    try:
+        print('hello world', i)
+    finally:
+        l.release()
+
+
+if __name__ == '__main__':
+    lock = Lock()  # 不使用锁的情况下，来自于多进程的输出很容易产生混淆
+
+    for num in range(10):
+        Process(target=f, args=(lock, num)).start()
+```
+
+
+
 **共享内存Manager**
 
 为了在Python里面实现多进程通信，上面提及的 Pipe Queue 把需要通信的信息从内存里深拷贝了一份给其他线程使用（需要分发的线程越多，其占用的内存越多）。而共享内存会由解释器负责维护一块共享内存（而不用深拷贝），这块内存每个进程都能读取到，读写的时候遵守管理（因此不要以为用了共享内存就一定变快）。
 
-Manager可以创建一块共享的内存区域，但是存入其中的数据需要按照特定的格式，Value可以保存数值，Array可以保存数组。
+Manager可以创建一块共享的内存区域，但是存入其中的数据需要按照特定的格式，Value可以保存数值，Array可以保存数组
+
+```python
+from multiprocessing import Process, Value, Array
+
+def f(n, a):
+    n.value = 3.1415927
+    for i in range(len(a)):
+        a[i] = -a[i]
+
+if __name__ == '__main__':
+    num = Value('d', 0.0)
+    arr = Array('i', range(10))
+
+    p = Process(target=f, args=(num, arr))
+    p.start()
+    p.join()
+
+    print(num.value)
+    print(arr[:])
+```
 
 ```python
 from multiprocessing import Process, Lock
+# 为了更灵活地使用共享内存，可以使用 multiprocessing.sharedctypes 模块，该模块支持创建从共享内存分配的任意ctypes对象
 from multiprocessing.sharedctypes import Value, Array
 from ctypes import Structure, c_double
 
