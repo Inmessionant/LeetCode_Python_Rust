@@ -11,3 +11,18 @@
 
 ------
 
+
+
+#### Rust
+
+
+
+- [ ] **Rust语言圣经(Rust Course): https://course.rs/about-book.html**
+- [ ] **Rust By Practice( Rust 练习实践 ): https://practice-zh.course.rs/why-exercise.html**
+
+
+
+------
+
+
+
