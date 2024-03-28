@@ -7,7 +7,7 @@ impl Solution {
         for i in 0..nums.len() {
             if let Some(k) = map.get(&(target - nums[i])) {
                 if *k != i {
-                    return vec![*k as i32,  i as i32];
+                    return vec![i as i32, *k as i32]
                 }
             }
             map.insert(nums[i], i);
