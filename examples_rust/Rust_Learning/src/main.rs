@@ -1,4 +1,4 @@
-use std::io;
+use std::{io, iter::Enumerate};
 use rand::Rng;
 use std::cmp::Ordering;
 
@@ -67,7 +67,22 @@ fn func3_2() {
     println!("guess = {}", guess)
 }
 
+fn func3_3() {
+    let tup = (1, 2, 3);
+    let (x, y, z) = tup;
+    println!("{} {} {}", x, y, z);
+    println!("{} {} {}", tup.0, tup.1, tup.2);
+
+    let a: [i32; 3] = [1, 2, 3];
+    let a = [32; 10];
+
+    for (idx, &item) in a.iter().enumerate() {
+        print!("{} => {}\n", idx, item)
+    }
+
+}
+
 fn main() {
-    func3_2();
+    func3_3();
 
 }
