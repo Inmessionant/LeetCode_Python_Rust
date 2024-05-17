@@ -14,7 +14,7 @@ fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
     largest
 }
 
-fn main() {
+fn fnc1() {
     let number_list = vec![34, 50, 25, 100, 65];
 
     let result = largest(&number_list);
@@ -49,5 +49,25 @@ fn main() {
             Ordering::Greater => println!("guess_number {} is larger than secrect number {}", guess, secrect_number),
         }
     }
+}
+
+fn fnc2() {
+
+    const MAX_ITEAMS: i32 = 10000;
+    println!("const MAX_ITEAMS = {}", MAX_ITEAMS);
+
+    let mut x = 2;
+    println!("x = {}", x);
+    x = 10;
+    println!("x = {}", x);
+}
+
+fn func3_2() {
+    let guess: isize = "32".parse().expect("not a number");
+    println!("guess = {}", guess)
+}
+
+fn main() {
+    func3_2();
 
 }
