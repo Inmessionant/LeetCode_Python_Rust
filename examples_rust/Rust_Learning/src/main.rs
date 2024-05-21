@@ -82,7 +82,11 @@ fn func3_3() {
 
 }
 
+fn func3_4() {
+
+}
+
 fn main() {
-    func3_3();
+    func3_4();
 
 }
