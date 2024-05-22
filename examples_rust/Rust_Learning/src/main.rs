@@ -82,20 +82,20 @@ fn func3_3() {
 
 }
 
-fn first_world(s: &String) -> usize {
+fn first_world(s: &str) -> &str {
     let bytes = s.as_bytes();
 
     for (i, &item) in bytes.iter().enumerate() {
          if item == b' ' {
-            return i;
+            return &s[..i];
          }
     }
-    s.len()
+    &s[..]
 }
 
 fn func3_4() {
     let s = String::from("Hello world");
-    let idx = first_world(&s);
+    let idx = first_world(&s[..]);
     println!("{}", idx);
 
 }
