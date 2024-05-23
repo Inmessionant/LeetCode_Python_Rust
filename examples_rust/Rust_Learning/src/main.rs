@@ -165,6 +165,9 @@ struct User {
     active: bool,
 }
 
+struct Color(i32, i32, i32);
+struct Point(i32, i32, i32);
+
 fn buil_user(username: String, email: String) -> User {
     User {
         username: username,
@@ -190,12 +193,9 @@ fn func5_1() {
         username: String::from("value"),
         ..user
     };
+
+    let black = Color(0, 0, 0);
 }
-
-struct Color(i32, i32, i32);
-struct Point(i32, i32, i32);
-
-let black = Color(0, 0, 0);
 
 fn func5_2() {
 
