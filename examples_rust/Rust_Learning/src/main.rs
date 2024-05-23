@@ -158,7 +158,41 @@ fn func4_3() {
 
 }
 
+struct User {
+    username: String,
+    email: String,
+    sign_in_count: u64,
+    active: bool,
+}
+
+fn buil_user(username: String, email: String) -> User {
+    User {
+        username: username,
+        email: email,
+        sign_in_count: 0,
+        active: true,
+    }
+}
+
+fn func5_1() {
+    let mut user = User {
+        email: String::from("123456@outlook.com"),
+        username: String::from("zarek"),
+        sign_in_count: 556,
+        active: true,
+    };
+
+    user.email = String::from("allen@163.com");
+
+    let mut user2 = buil_user(String::from("username"), String::from("email"));
+    let mut user3 = User {
+        email: String::from("value"),
+        username: String::from("value"),
+        ..user
+    };
+}
+
 fn main() {
-    func3_4();
+    func5_1();
 
 }
