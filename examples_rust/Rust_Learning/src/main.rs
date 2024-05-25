@@ -197,11 +197,20 @@ fn func5_1() {
     let black = Color(0, 0, 0);
 }
 
-fn func5_2() {
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
 
+fn func5_2() -> u32 {
+    let rect = Rectangle {
+        width: 30,
+        height: 50,
+    };
+    rect.height * rect.width
 }
 
 fn main() {
-    func5_2();
+    println!("{}", func5_2());
 
 }
