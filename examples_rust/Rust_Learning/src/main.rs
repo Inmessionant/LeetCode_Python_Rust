@@ -208,7 +208,7 @@ fn func5_2() -> u32 {
         width: 30,
         height: 50,
     };
-    println!("{:?}", rect);
+    println!("{:#?}", rect);
     rect.height * rect.width
 }
 
