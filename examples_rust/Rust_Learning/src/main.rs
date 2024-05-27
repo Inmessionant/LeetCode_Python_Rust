@@ -237,8 +237,36 @@ fn func5_2() {
     };
     println!("{:#?}", rect1.cover(&rect2));
     println!("{:#?}", rect1.cover(&rect3));
+
+    let square = Rectangle::square(40);
+}
+
+enum IPAddrKind {
+    IPv4,
+    IPv6,
+}
+
+struct  IPAddr {
+    ip_kind: IPAddrKind,
+    address: String, 
+}
+
+fn router(ip_kind: IPAddr) -> {
+
+}
+
+fn func6_1() {
+    let home = IPAddr {
+        ip_kind: IPAddrKind::IPv4,
+        address: String::from("191.169.1.1"),
+    };
+
+    let loopback = IPAddr {
+        ip_kind: IPAddrKind::IPv6,
+        address: String::from("::1"),
+    };
 }
 
 fn main() {
-    func5_2();
+    func6_1();
 }
