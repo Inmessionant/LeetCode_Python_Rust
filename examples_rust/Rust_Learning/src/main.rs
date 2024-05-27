@@ -1,6 +1,7 @@
+// https://www.bilibili.com/video/BV1hp4y1k7SV
+
 use rand::Rng;
-use std::cmp::Ordering;
-use std::{intrinsics::mir::Call, io, iter::Enumerate};
+use std::{cmp::Ordering, io};
 
 fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
     let mut largest = list[0];
