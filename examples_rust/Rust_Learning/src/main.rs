@@ -203,15 +203,42 @@ struct Rectangle {
     height: u32,
 }
 
-fn func5_2() -> u32 {
-    let rect = Rectangle {
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+
+    fn cover(&self, other: &Rectangle) -> bool {
+        self.width >= other.width && self.height >= other.height
+    }
+
+    fn square(size: u32) -> Rectangle {
+        Rectangle {
+            width: size,
+            height: size,
+        }
+    }
+}
+
+fn func5_2() {
+    let rect1 = Rectangle {
         width: 30,
         height: 50,
     };
-    println!("{:#?}", rect);
-    rect.height * rect.width
+
+    let rect2 = Rectangle {
+        width: 10,
+        height: 40,
+    };
+
+    let rect3 = Rectangle {
+        width: 35,
+        height: 55,
+    };
+    println!("{:#?}", rect1.cover(&rect2));
+    println!("{:#?}", rect1.cover(&rect3));
 }
 
 fn main() {
-    println!("{}", func5_2());
+    func5_2();
 }
