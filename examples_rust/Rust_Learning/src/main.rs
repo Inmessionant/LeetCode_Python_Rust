@@ -1,6 +1,6 @@
-use std::{io, iter::Enumerate};
 use rand::Rng;
 use std::cmp::Ordering;
+use std::{intrinsics::mir::Call, io, iter::Enumerate};
 
 fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
     let mut largest = list[0];
@@ -25,34 +25,43 @@ fn fnc1() {
     let result = largest(&char_list);
     println!("The largest char is {}", result);
 
-
     let secrect_number = rand::thread_rng().gen_range(1, 100); // [1, 100)
     print!("rand_number is: {}\n", secrect_number);
 
     loop {
         println!("please input a number:[0, 100)");
         let mut guess = String::new();
-        io::stdin().read_line(&mut guess).expect("can't read a number!");
+        io::stdin()
+            .read_line(&mut guess)
+            .expect("can't read a number!");
 
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => {
                 println!("invaild number, please input a number again!");
-                continue
+                continue;
             }
         };
         print!("you guess numvber is: {}\n", guess);
 
         match guess.cmp(&secrect_number) {
-            Ordering::Less => println!("guess_number {} is smaller than secrect number {}", guess, secrect_number),
-            Ordering::Equal => println!("guess_number {} is equal to secrect number {}", guess, secrect_number),
-            Ordering::Greater => println!("guess_number {} is larger than secrect number {}", guess, secrect_number),
+            Ordering::Less => println!(
+                "guess_number {} is smaller than secrect number {}",
+                guess, secrect_number
+            ),
+            Ordering::Equal => println!(
+                "guess_number {} is equal to secrect number {}",
+                guess, secrect_number
+            ),
+            Ordering::Greater => println!(
+                "guess_number {} is larger than secrect number {}",
+                guess, secrect_number
+            ),
         }
     }
 }
 
 fn fnc2() {
-
     const MAX_ITEAMS: i32 = 10000;
     println!("const MAX_ITEAMS = {}", MAX_ITEAMS);
 
@@ -79,10 +88,9 @@ fn func3_3() {
     for (idx, &item) in a.iter().enumerate() {
         print!("{} => {}\n", idx, item)
     }
-
 }
 
-fn func3_4() -> i32{
+fn func3_4() -> i32 {
     let x = 5;
     println!("before x = {}", x);
     let y = {
@@ -100,7 +108,7 @@ fn func3_5() {
 
     if number < 0 {
         println!("number < 0 number = {}", number);
-    }else if number < 10 {
+    } else if number < 10 {
         println!("number < 10 number = {}", number);
     } else {
         println!("default number = {}", number);
@@ -109,7 +117,6 @@ fn func3_5() {
     let cur = if number < 100 { 5 } else { 6 };
     println!(" cur = {}", cur);
 }
-
 
 fn func3_6() {
     let mut cnt: i32 = 1000;
@@ -128,7 +135,7 @@ fn func3_6() {
         cnt -= 1;
     }
 
-    let a = [10, 20, 30 ,40 ,50];
+    let a = [10, 20, 30, 40, 50];
 
     for val in a.iter() {
         println!("val = {}", val);
@@ -139,14 +146,13 @@ fn func3_6() {
     }
 }
 
-
 fn first_world(s: &str) -> &str {
     let bytes = s.as_bytes();
 
     for (i, &item) in bytes.iter().enumerate() {
-         if item == b' ' {
+        if item == b' ' {
             return &s[..i];
-         }
+        }
     }
     &s[..]
 }
@@ -155,7 +161,6 @@ fn func4_3() {
     let s = String::from("Hello world");
     let idx = first_world(&s[..]);
     println!("{}", idx);
-
 }
 
 struct User {
@@ -246,13 +251,27 @@ enum IPAddrKind {
     IPv6,
 }
 
-struct  IPAddr {
+struct IPAddr {
     ip_kind: IPAddrKind,
-    address: String, 
+    address: String,
 }
 
-fn router(ip_kind: IPAddr) -> {
+enum IPAddress {
+    V4(u8, u8, u8, u8),
+    V6(String),
+}
 
+fn router(ip_kind: IPAddr) {}
+
+enum Message {
+    Quit,
+    Move { x: i32, y: i32 },
+    Write(String),
+    ChangeColor(i32, i32, i32),
+}
+
+impl Message {
+    fn call(&self) {}
 }
 
 fn func6_1() {
@@ -261,12 +280,25 @@ fn func6_1() {
         address: String::from("191.169.1.1"),
     };
 
+    let home = IPAddress::V4(192, 168, 1, 1);
+
     let loopback = IPAddr {
         ip_kind: IPAddrKind::IPv6,
         address: String::from("::1"),
     };
+
+    let loopback = IPAddress::V6(String::from("::1"));
+
+    let quit = Message::Quit;
+    let move_to: Message = Message::Move { x: 12, y: 24 };
+    let write = Message::Write(String::from("hello"));
+    let changecolor = Message::ChangeColor(255, 255, 255);
+
+    move_to.call();
 }
 
+fn func6_2() {}
+
 fn main() {
-    func6_1();
+    func6_2();
 }
