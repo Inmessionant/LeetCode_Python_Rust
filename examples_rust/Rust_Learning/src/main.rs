@@ -298,8 +298,30 @@ fn func6_1() {
     move_to.call();
 }
 
-fn func6_2() {}
+fn func6_2() {
+    // Option<T> != T
+    let x: i8 = 5;
+    let y: Option<i8> = Some(5);
+
+    // let z = x + y;
+}
+
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter,
+}
+
+fn func6_3(coin: Coin) -> u8 {
+    match coin {
+        Coin::Penny => 1,
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter => 25,
+    }
+}
 
 fn main() {
-    func6_2();
+    println!("{}", func6_3(Coin::Nickel));
 }
