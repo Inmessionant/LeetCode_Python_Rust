@@ -306,22 +306,48 @@ fn func6_2() {
     // let z = x + y;
 }
 
+#[derive(Debug)]
+enum UsState {
+    Alabama,
+    Alaska,
+}
+
 enum Coin {
     Penny,
     Nickel,
     Dime,
-    Quarter,
+    Quarter(UsState),
 }
 
+// println!("{}", func6_3(Coin::Quarter(UsState::Alaska)));
 fn func6_3(coin: Coin) -> u8 {
     match coin {
-        Coin::Penny => 1,
+        Coin::Penny => {
+            println!("Penny");
+            1
+        }
         Coin::Nickel => 5,
         Coin::Dime => 10,
-        Coin::Quarter => 25,
+        Coin::Quarter(state) => {
+            println!("State quarter from {:?}", state);
+            25
+        }
     }
 }
 
+fn plus_one(x: Option<i32>) -> Option<i32> {
+    match x { // 必须穷举所有可能
+        None => None,
+        Some(i) => Some(i+1),
+    }
+}
+
+fn func6_3_2() {
+    let five = Some(5);
+    let six = plus_one(five);
+    let none = plus_one(None);
+}
+
 fn main() {
-    println!("{}", func6_3(Coin::Nickel));
+    func6_3_2();
 }
