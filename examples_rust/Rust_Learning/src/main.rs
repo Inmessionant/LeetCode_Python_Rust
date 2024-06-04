@@ -346,8 +346,27 @@ fn func6_3_2() {
     let five = Some(5);
     let six = plus_one(five);
     let none = plus_one(None);
+
+    let v = 0u8;
+
+    match v {
+        1 => println!("1"),
+        3 => println!("3"),
+        5 => println!("5"),
+        _ => println!("default"),
+    }
+}
+
+fn func6_4() {
+    let v = Some(3);
+
+    if let Some(3) = v { // 只对v是Some(3)情况做处理，但放弃了所有穷举的可能性，可以搭配else()使用
+        println!("three");
+    } else {
+        println!("others");
+    }
 }
 
 fn main() {
-    func6_3_2();
+    func6_4();
 }
