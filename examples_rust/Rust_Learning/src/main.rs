@@ -367,6 +367,10 @@ fn func6_4() {
     }
 }
 
+fn func7_1() {
+
+}
+
 fn main() {
     func6_4();
 }
