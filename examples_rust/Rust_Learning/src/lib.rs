@@ -48,8 +48,8 @@ mod back_of_house {
 
 }
 
-pub fn eat_at_restaurant() {
+pub fn eat_at_restaurants() {
     let mut meal = back_of_house::Breakfast::summer("Rye");
-    meal.toast = STring::from("Wheat");
+    meal.toast = String::from("Wheat");
     // meal.seasonal_friut
 }
