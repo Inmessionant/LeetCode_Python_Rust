@@ -53,3 +53,9 @@ pub fn eat_at_restaurants() {
     meal.toast = String::from("Wheat");
     // meal.seasonal_friut
 }
+
+use std::collections::hash_map;
+
+use std::fmt::Result;
+use std::io::Result as IOResult;
+
