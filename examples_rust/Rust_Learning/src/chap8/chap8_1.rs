@@ -47,5 +47,20 @@ pub fn chap8_1_3() {
 }
 
 pub fn chap8_3() {
-    
+    let data = "initial contents".to_string();
+    let data1 = String::from("initial contents");
+    println!("{} == {}", data, data1);
+
+    let mut s = "foo".to_string();
+    s.push_str(" bar");
+    println!("{}", s);
+
+    s.push('l'); // char
+    println!("{}", s);
+
+    let s1 = "hello, ".to_string();
+    let s2 = "world!".to_string();
+    let s3 = s1 + &s2;
+    println!("{}", s3);
+    // println!("{} {}", s1, s2); 
 }
