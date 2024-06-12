@@ -62,5 +62,20 @@ pub fn chap8_3() {
     let s2 = "world!".to_string();
     let s3 = s1 + &s2;
     println!("{}", s3);
-    // println!("{} {}", s1, s2); 
+    // println!("{} {}", s1, s2);
+
+    let s1 = "tic".to_string();
+    let s2 = "tac".to_string();
+    let s3 = "toe".to_string();
+
+    // let s4 = s1 + "-" + &s2 + "-" + &s3;
+
+    let s4 = format!("{}-{}-{}", s1, s2, s3);
+    println!("{}", s4);
+
+
+}
+
+pub fn chap8_4() {
+    
 }
