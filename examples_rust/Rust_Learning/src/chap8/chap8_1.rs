@@ -77,5 +77,28 @@ pub fn chap8_3() {
 }
 
 pub fn chap8_4() {
-    
+    let len = "&&sssa".to_string().len();
+    print!("{}", len);
+
+    for val in "&&sssa".bytes() {
+        print!("{}\n", val);
+    }
+
+    for val in "&&sssa".chars() {
+        print!("{}\n", val);
+    }
+}
+
+use::std::collections::HashMap;
+
+pub fn chap8_5() {
+    // let mut socres: HashMap<String, i32> = HashMap::new();
+    let mut socres = HashMap::new();
+    socres.insert("key1".to_string(), 10);
+
+
+    for (key, val) in socres {
+        print!("{}: {}", key, val);
+    }
+
 }
