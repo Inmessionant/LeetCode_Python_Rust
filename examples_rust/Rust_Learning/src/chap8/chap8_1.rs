@@ -31,3 +31,21 @@ pub fn chap8_1_2() {
         println!("{}", val);
     }
 }
+
+enum SpreadsheetCell {
+    Int(i32),
+    Float(f64),
+    Test(String),
+}
+
+pub fn chap8_1_3() {
+    let row = vec![
+        SpreadsheetCell::Int(3),
+        SpreadsheetCell::Float(10.12),
+        SpreadsheetCell::Test(String::from("blue")),
+    ];
+}
+
+pub fn chap8_3() {
+    
+}

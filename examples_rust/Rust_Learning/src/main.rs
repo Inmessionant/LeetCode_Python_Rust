@@ -7,5 +7,5 @@ use std::{cmp::Ordering, collections::HashMap};
 mod chap8;
 
 fn main() {
-    chap8::chap8_1::chap8_1_2();
+    chap8::chap8_1::chap8_3();
 }
