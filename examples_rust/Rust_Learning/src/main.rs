@@ -4,8 +4,8 @@ use ::std::io::{self, Write};
 use rand::Rng;
 use std::{cmp::Ordering, collections::HashMap};
 
-mod chap8;
+mod chap9;
 
 fn main() {
-    chap8::chap8_1::chap8_5();
+    chap9::chap9_1();
 }
