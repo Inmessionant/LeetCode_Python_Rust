@@ -1,22 +1,22 @@
-use std::{fmt::Display, iter::Sum};
+use std::{fmt::{Debug, Display}, iter::Sum};
 
 
 
 pub fn chap10_1() {
-    // fn largest<T: std::cmp::PartialOrd>(list: &[T]) -> T {
-    //     let mut largest_number = list[0];
-    //     for &val in list {
-    //         if val > largest_number {
-    //             largest_number = val;
-    //         }
-    //     }
-    //     largest_number
+    fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
+        let mut largest_number = list[0];
+        for &val in list.iter() {
+            if val > largest_number {
+                largest_number = val;
+            }
+        }
+        largest_number
 
-    // }
+    }
 
-    // let numbers = vec![10, 20, 15, 70];
-    // let result = largest(&numbers);
-    // println!("the largest number is {}", result);
+    let numbers = vec![10, 20, 15, 70];
+    let result = largest(&numbers);
+    println!("the largest number is {}", result);
 
     struct Point<T> {
         x: T,
@@ -114,6 +114,19 @@ pub fn chap10_3() {
 
     notify(news_article);
     notify(tweet);
+
+
+    pub fn notify_bith<T: Summary + Display, U: Clone + Debug>(a: T, b: U) -> String {
+        "hello".to_string()
+    }
+
+    pub fn notify_bith1<T, U>(a: T, b: U) -> String 
+    where
+        T: Summary + Display,
+        U: Clone + Debug
+    {
+        "hello".to_string()
+    }
 
     
 }
