@@ -1,4 +1,4 @@
-use std::iter::Sum;
+use std::{fmt::Display, iter::Sum};
 
 
 
@@ -62,18 +62,58 @@ pub fn chap10_3() {
         pub content: String,
     }
 
+    struct Tweet {
+        pub headline: String,
+        pub location: String,
+        pub author: String,
+        pub content: String,
+    }
+
     impl Summary for NewsArticle {
         fn summary(&self) -> String {
-            return format!("{}, by {} ({})", self.headline, self.author, self.location)
+            return format!("NewsArticle {}, by {} ({})", self.headline, self.author, self.location)
         }
     }
 
-    let news = NewsArticle {
+    impl Summary for Tweet {
+        fn summary(&self) -> String {
+            return format!("Tweet {}, by {} ({})", self.headline, self.author, self.location)
+        }
+    }
+
+    pub fn notify(item: impl Summary) {
+        println!("breaking news! {}", item.summary());
+    }
+
+    pub fn notify1(item: impl Summary + Display) {
+        println!("breaking news! {}", item.summary());
+    }
+
+    pub fn notify2<T: Summary>(item: T) { // 多参数时候比较直观
+        println!("breaking news! {}", item.summary());
+    }
+
+    pub fn notify3<T: Summary + Display>(item: T) { // 多参数时候比较直观
+        println!("breaking news! {}", item.summary());
+    }
+    
+    
+    let news_article = NewsArticle {
         headline: "ebooks".to_string(),
         location: "xian".to_string(),
         author: "JL".to_string(),
         content: "hello, world".to_string(), 
     };
 
-    print!("summary: {}", news.summary());
+    let tweet: Tweet = Tweet {
+        headline: "ebooks".to_string(),
+        location: "xian".to_string(),
+        author: "JL".to_string(),
+        content: "hello, world".to_string(), 
+    };
+
+    notify(news_article);
+    notify(tweet);
+
+    
 }
