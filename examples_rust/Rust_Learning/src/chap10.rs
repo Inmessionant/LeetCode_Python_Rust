@@ -1,3 +1,5 @@
+use std::iter::Sum;
+
 
 
 pub fn chap10_1() {
@@ -48,4 +50,30 @@ pub fn chap10_1() {
 
 pub fn chap10_3() {
     // trait
+    pub trait Summary {
+        fn summary(&self) -> String;
+        // fn summary1(&self) -> String;
+    }
+
+    struct NewsArticle {
+        pub headline: String,
+        pub location: String,
+        pub author: String,
+        pub content: String,
+    }
+
+    impl Summary for NewsArticle {
+        fn summary(&self) -> String {
+            return format!("{}, by {} ({})", self.headline, self.author, self.location)
+        }
+    }
+
+    let news = NewsArticle {
+        headline: "ebooks".to_string(),
+        location: "xian".to_string(),
+        author: "JL".to_string(),
+        content: "hello, world".to_string(), 
+    };
+
+    print!("summary: {}", news.summary());
 }
